@@ -2,10 +2,11 @@
 
 This is simple app for learning by coding purposes. This simple contact manager app implements:
 
-- Base Class & Functional Component
+- Class Base Component & Functional Component
 - React simple LifeCycle
 - Context Api
 - React Router
+- Basic CRUD functionality with JsonPlaceholder
 
 ### Installation
 
