@@ -1,6 +1,9 @@
 import React from 'react';
+
 // Use BrowserRouter instead of HashRouter (similar with history mode in vue)
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+
+// Child Components
 import Contacts from './components/contacts/Contacts';
 import Header from './components/layout/Header';
 import About from './components/pages/About';
@@ -9,7 +12,9 @@ import EditContact from './components/contacts/EditContact';
 import NotFound from './components/pages/NotFound';
 import Test from "./components/lifeCycleTest/Test";
 
-import { Provider } from "./context";
+// Redux for State Management
+import { Provider } from "react-redux";
+import store from './store';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -17,7 +22,7 @@ import './App.css';
 class App extends React.Component {
   render() {
     return (
-      <Provider>
+      <Provider store={store}>
         <Router>
           <div className="App">
             <Header branding="Contact Manager" />
@@ -35,7 +40,6 @@ class App extends React.Component {
           </div>
         </Router>
       </Provider>
-      
     )
   }
 }
